@@ -1,0 +1,18 @@
+body {
+	background-color: tomato;
+}
+
+#allume, #eteind {
+	display: flex;
+	margin: 5%;
+	height: 3rem;
+	width: 10%;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%
+}

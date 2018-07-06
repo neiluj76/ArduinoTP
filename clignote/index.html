@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Arduino</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="btn">
+		<a href="/on"><button id="allume">ON</button></a>
+		<a href="/off"><button id="eteind">OFF</button></a>
+	</div>
+	<p id="temperature">Temperature : </p>
+</body>
+	<script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:3000');
+        socket.on('msgTemp', (message) => {
+        	document.getElementById('temperature').innerHTML = message;
+        })
+    </script>
+</html>
